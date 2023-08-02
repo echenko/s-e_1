@@ -32,7 +32,7 @@ body {
 
 .menu-input:checked~.navigation {
     max-height: 500px;
-    transition: all .5s ease-in-out;
+    /* transition: all 1s ease-in-out; */
     opacity: 1;
 }
 
@@ -93,7 +93,7 @@ body {
 
 
 .navigation {
-    transition: all .5s ease-in-out;
+    transition: all 1s ease-in-out;
     max-height: 0;
     display: flex;
     opacity: 0;
@@ -215,18 +215,26 @@ body {
         display: flex;
         justify-content: space-between;
         opacity: 0;
+        gap: 0;
     }
+
+
 
     .navigation-list {
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 75%;
+        width: 100%;
         text-align: right;
+        transform: translateY(48px);
     }
 }
 
 @media (max-width: 575px) {
     html {
         width: 100%;
+    }
+
+    .navigation-logo {
+        display: none;
     }
 }
