@@ -20,27 +20,73 @@ body {
 .page-header {
     position: sticky;
     top: 12px;
-    background: rgba(150, 0, 255, 0.2);
-    border: 1px solid rgba(150, 0, 255, 1);
     padding: 12px;
     margin: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navigation-logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    transition: all .5s ease-in-out;
+    margin: 12px;
+    border-radius: 2px;
+}
+
+.navigation-logo:hover,
+.navigation-logo:focus-visible {
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+}
+
+.main-header {
+    text-align: center;
+    margin: 0;
+    color: rgba(150, 0, 255, 1);
+}
+
+.social-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.social-link {
+    display: block;
+    text-decoration: none;
+    margin: 4px;
+    color: rgba(150, 0, 255, 0.8);
+    transition: all .5s ease-in-out;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+    transition: all .5 ease-in-out;
+    transform: scale(1.1);
+    color: rgba(150, 0, 255, 1);
 }
 
 .menu-input {
-    display: none;
+    visibility: hidden; 
 }
 
 .menu-input:checked~.navigation {
     max-height: 500px;
-    /* transition: all 1s ease-in-out; */
     opacity: 1;
 }
 
 .menu-label {
     position: absolute;
-    right: 0;
     top: 0;
-    margin: 6px;
+    right: 0;
     align-items: center;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
@@ -49,16 +95,14 @@ body {
 
 .menu-open {
     opacity: 1;
-    position: fixed;
-    right: 12px;
-    top: 12px;
+    position: absolute;
     color: rgba(150, 0, 255, 0.8);
     z-index: 1;
 }
 
 .menu-open:hover {
     color: rgba(150, 0, 255, 1);
-    transition: all .5s ;
+    transition: all .5s;
     scale: 1.1;
 }
 
@@ -68,15 +112,13 @@ body {
 
 .menu-closed {
     opacity: 0;
-    position: fixed;
-    right: 12px;
-    top: 12px;
+    position: absolute;
     color: rgba(150, 0, 255, 0.8);
 }
 
 .menu-closed:hover {
     color: rgba(150, 0, 255, 1);
-    transition: all .5s ;
+    transition: all .5s;
     scale: 1.1;
 }
 
@@ -90,28 +132,14 @@ body {
     z-index: 1;
 }
 
-
-
 .navigation {
     transition: all 1s ease-in-out;
     max-height: 0;
     display: flex;
     opacity: 0;
     gap: 12px;
-}
-
-.navigation-logo {
-    display: block;
-    width: 100px;
-    height: 100px;
-    transition: all .5s ease-in-out;
-    margin: 12px;
-}
-
-.navigation-logo:hover,
-.navigation-logo:focus-visible {
-    transform: scale(1.1);
-    transition: all .5s ease-in-out;
+    grid-row: 2/3;
+    grid-column: 1/4 ;
 }
 
 .navigation-list {
@@ -129,7 +157,7 @@ body {
     padding: 12px;
     color: white;
     background: rgba(150, 0, 255, 0.8);
-    border-radius: 1px;
+    border-radius: 2px;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     transition: all .5s ease-in-out;
@@ -140,33 +168,6 @@ body {
     transition: all .5 ease-in-out;
     transform: scale(1.1);
     background: rgba(150, 0, 255, 1);
-}
-
-.social-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-.social-link {
-    display: block;
-    text-decoration: none;
-    padding: 6px;
-    color: rgba(150, 0, 255, 0.8);
-    border-radius: 1px;
-    transition: all .5s ease-in-out;
-}
-
-.social-link:hover,
-.social-link:focus-visible {
-    transition: all .5 ease-in-out;
-    transform: scale(1.1);
-    color: rgba(150, 0, 255, 1);
-
 }
 
 @media (max-width: 1440px) {
@@ -207,12 +208,22 @@ body {
     }
 
     .page-header {
-        padding: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .social-list {
+        grid-column: 1/2;
+        flex-direction: column;
+        /* justify-content: flex-end; */
+        align-items: flex-end;
     }
 
     .navigation {
         display: flex;
-        padding: 12px;
+        padding: 0px;
+        gap: 6px;
+        grid-column: 2/4 ;
     }
 
     .navigation-list {
@@ -220,6 +231,7 @@ body {
         flex-wrap: nowrap;
         width: 100%;
         text-align: right;
+        gap: 6px;
     }
 }
 
@@ -228,7 +240,7 @@ body {
         width: 100%;
     }
 
-    .navigation-logo {
-        display: none;
+    .social-list {
+        gap: 6px;
     }
 }
