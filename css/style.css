@@ -205,6 +205,8 @@ body {
 	border-radius: 6px 0 6px;
 }
 
+.label-menu:has( .input-menu:checked) {}
+
 @media (max-width: 1440px) {
 	html {
 		width: 1200px;
