@@ -81,6 +81,11 @@ body {
 	border-radius: 12px 0 12px;
 }
 
+.logo-image {
+	width: 75px;
+	height: 75px;
+}
+
 .logo-link:hover, .logo-link:focus-visible {
 	-webkit-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
