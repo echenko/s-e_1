@@ -268,6 +268,36 @@ body {
 	position: absolute;
 }
 
+.main-about {
+	width: 100%;
+	padding: 24px;
+	text-align: center;
+}
+
+.main-advantages {
+	width: 100%;
+	padding: 24px;
+	text-align: center;
+}
+
+.main-advantages-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.main-advantages-item {
+	width: 100%;
+	padding: 24px;
+	border: 2px solid rgba(0, 0, 255, 1);
+	border-radius: 12px 0 12px;
+	display: flex;
+	justify-content: space-around;
+}
+
 
 
 .footer-container {
@@ -390,6 +420,18 @@ body {
 		background: blueviolet;
 		padding: 6px;
 		text-align: right;
+	}
+
+	.main-advantages {
+		padding: 12px;
+	}
+
+	.main-advantages-list {
+		gap: 12px;
+	}
+
+	.main-advantages-item {
+		padding: 12px;
 	}
 }
 
