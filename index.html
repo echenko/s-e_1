@@ -9,7 +9,15 @@
 </head>
 <body>
     <header class="header-container">
-        <input class="input-menu visually-hidden"  type="checkbox" id="check-menu">
+        <a class="logo-link" href="index.html">
+            <picture class="logo-image">
+                <source media="(min-width: 768px)" srcset="images/logo/logo-150.webp">
+                <source media="(max-width: 768px)" srcset="images/logo/logo-100.webp">
+                <img src="images/logo/logo-150.webp" alt="image-logo">
+            </picture>
+        </a>
+        <p class="header-title">NoProblems</p>
+        <input class="input-menu visually-hidden"  type="checkbox" id="check-menu">     
         <div class="header-menu">
             <label class="label-menu" for="check-menu">
                 <picture class="menu-open">
@@ -23,14 +31,6 @@
                     <img src="icons/menu/menu-close-30.svg" alt="menu-close">
                 </picture>
             </label>
-            <p class="header-title">NoProblems</p>
-            <a class="logo-link" href="index.html">
-                <picture class="logo-image">
-                    <source media="(min-width: 768px)" srcset="images/logo/logo-150.webp">
-                    <source media="(max-width: 768px)" srcset="images/logo/logo-100.webp">
-                    <img src="images/logo/logo-150.webp" alt="image-logo">
-                </picture>
-            </a>
         </div>
         <nav class="navigation">
             <ul class="navigation-list">
