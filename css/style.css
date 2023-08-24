@@ -305,7 +305,7 @@ body {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	width: 500px;
-	height: 530px;
+	height: 500px;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -335,7 +335,7 @@ body {
 
 .reason-slider-item img {
 	width: 500px;
-	height: 500px;
+	height: 100%;
 }
 
 
