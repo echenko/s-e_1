@@ -309,31 +309,36 @@ body {
 
 .reason-slider-list {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: 50px auto;
 	padding: 0;
 	height: 600px;
 	width: 600px;
 	position: relative;
+
 }
 
 .reason-slider-item {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+
 }
 
-.reason-slider-image {
+.reason-slider-item {
 	width: 600px;
 	height: 600px;
 	opacity: 0;
 	scale: 0;
-	transform: rotate(-360deg);
 	transition: all 1s ease-in-out;
+	border-radius: 50%;
+
 }
 
-.reason-slider-image.active {
+.reason-slider-item.active {
 	opacity: 1;
 	scale: 1;
-	transform: rotate(360deg);
 	transition: all 1s ease-in-out;
+	border-radius: 5px;
 }
 
 .reason-slider-button {
@@ -345,6 +350,7 @@ body {
 	top: 50%;
 	border-radius: 50%;
 	box-shadow: 0px 0px 5px;
+	cursor: pointer;
 }
 
 .reason-slider-button.left {
