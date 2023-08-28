@@ -323,14 +323,28 @@ body {
 .reason-slider-image {
 	width: 600px;
 	height: 600px;
+	opacity: 0;
+	scale: 0;
+	transform: rotate(-360deg);
+	transition: all 1s ease-in-out;
+}
+
+.reason-slider-image.active {
+	opacity: 1;
+	scale: 1;
+	transform: rotate(360deg);
+	transition: all 1s ease-in-out;
 }
 
 .reason-slider-button {
 	position: absolute;
 	border: none;
-	background: rgba(255,255, 255, .4);
-	width: 10%;
-	height: 100%;
+	background: rgba(255,255, 255, .9);
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px;
 }
 
 .reason-slider-button.left {
