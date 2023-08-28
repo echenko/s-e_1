@@ -299,14 +299,12 @@ body {
 	padding: 12px;
 }
 
-/* .main-usage {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	align-items: center;
-} */
-
 .main-usage-list {
 	text-align: left;
+}
+
+.reason-slider {
+	position: relative;
 }
 
 .reason-slider-list {
@@ -315,8 +313,6 @@ body {
 	padding: 0;
 	height: 600px;
 	width: 600px;
-	position: relative;
-
 }
 
 .reason-slider-item {
