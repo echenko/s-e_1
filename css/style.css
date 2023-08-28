@@ -273,7 +273,9 @@ body {
 	width: 100%;
 	padding: 24px;
 	text-align: center;
+	grid-template-columns: repeat(3, 1fr);
 }
+
 
 .main-advantages-list {
 	list-style-type: none;
@@ -295,49 +297,49 @@ body {
 	padding: 12px;
 }
 
+/* .main-usage {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+} */
+
 .main-usage-list {
 	text-align: left;
 }
 
 .reason-slider-list {
-	display: flex;
-	gap: 10px;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	width: 500px;
-	height: 500px;
 	list-style-type: none;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
-}
-
-::-webkit-scrollbar {
-    width: 24px; /* ширина для вертикального скролла */
-    height: 8px; /* высота для горизонтального скролла */
-    background-color: #143861;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #843465;
-    border-radius: 9em;
-    box-shadow: inset 1px 1px 10px #f3faf7;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #253861;
+	height: 600px;
+	width: 600px;
+	position: relative;
 }
 
 .reason-slider-item {
-	scroll-snap-align: center;
-	margin: 0;
-	padding: 0;
+	position: absolute;
 }
 
-.reason-slider-item img {
-	width: 500px;
+.reason-slider-image {
+	width: 600px;
+	height: 600px;
+}
+
+.reason-slider-button {
+	position: absolute;
+	border: none;
+	background: rgba(255,255, 255, .4);
+	width: 10%;
 	height: 100%;
 }
 
+.reason-slider-button.left {
+	left: 0;
+}
+
+.reason-slider-button.right {
+	right: 0;
+}
 
 .footer-container {
 	display: flex;
