@@ -316,11 +316,11 @@ body {
 
 .reason-slider {
 	position: relative;
+	margin: 0 auto;
 }
 
 .reason-slider-list {
 	list-style-type: none;
-	margin: 50px auto;
 	padding: 0;
 	height: 500px;
 	width: 500px;
@@ -376,13 +376,12 @@ body {
 
 .comment-slider {
 	position: relative;
-	width: 600px;
+	width: 500px;
 	margin: 0 auto;
 }
 
 .comment-slider-list {
 	list-style-type: none;
-	margin: 50px auto;
 	padding: 0;
 	height: 500px;
 	width: 500px;
@@ -440,6 +439,11 @@ body {
 	display: flex;
 	justify-content: space-between;
 	gap: 20px;
+}
+
+.comment-image {
+	width: 600px;
+	margin: 0 auto;
 }
 
 
@@ -514,6 +518,12 @@ body {
 	.usage {
 		display: grid;
 		grid-template-columns: 1fr;
+	}
+
+	.main-comment {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
 }
 
@@ -630,6 +640,10 @@ body {
 		box-shadow: none;
 	}
 
+	.comment-image {
+		width: 400px;
+	}
+
 }
 
 @media (max-width: 575px) {
@@ -667,5 +681,9 @@ body {
 	.comment-slider-item {
 		width: 300px;
 		height: 300px;
+	}
+
+	.comment-image {
+		width: 300px;
 	}
 }
