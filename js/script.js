@@ -1,28 +1,28 @@
-function slider(main_slider, counter_slider = 0, ) {
-    
-    function inner() {
-        index_slider = (index_slider + counter_slider) % main_slider.length;
-        
-        for (i = 0; i < main_slider.length; i++) {
-            if (i == index_slider) {
-                main_slider[i].classList.add("active");
-            } else {
-                main_slider[i].classList.remove("active");
-            }
+function slider(name_slider, index_slider) {
+    for (i = 0; i < name_slider.length; i++) {
+        if (i == index_slider) {
+            name_slider[i].classList.add("active");
+        } else {
+            name_slider[i].classList.remove("active");
         }
-        console.log(index_slider, main_slider.length);
     }
-    return inner
-  
 }
 
 const menu = document.querySelector('.main-container');
-let reason_slider = document.querySelectorAll(".reason-slider-list .reason-slider-item")
-let reason_slider_left = slider(reason_slider, reason_slider.length-1);
-let reason_slider_right = slider(reason_slider, 1);
-let index_slider = 0;
-let reason_slider_left_button = document.querySelector(".reason-slider-button.left").onclick = () => reason_slider_left();
-let reason_slider_rigth_button = document.querySelector(".reason-slider-button.right").onclick = () => reason_slider_right();
+menu.addEventListener('click', () => document.getElementById("check-menu").checked = false);
 
-menu.addEventListener('click', ()=>  document.getElementById("check-menu").checked = false);
+let reason_slider = document.querySelectorAll(".reason-slider-list .reason-slider-item");
+let reason_slider_index = 0;
+let reason_slider_left_button = document.querySelector(".reason-slider-button.left").onclick = () => {reason_slider_index = (reason_slider_index + reason_slider.length - 1) % reason_slider.length; slider(reason_slider, reason_slider_index)};
+let reason_slider_rigth_button = document.querySelector(".reason-slider-button.right").onclick = () => {reason_slider_index = (reason_slider_index + 1) % reason_slider.length;slider(reason_slider, reason_slider_index)};
+
+let comment_slider = document.querySelectorAll(".comment-slider-list .comment-slider-item");
+let comment_slider_index = 0;
+let comment_slider_left_button = document.querySelector(".comment-slider-button.left").onclick = () => {comment_slider_index = (comment_slider_index + comment_slider.length - 1) % comment_slider.length; slider(comment_slider, comment_slider_index)};
+let comment_slider_rigth_button = document.querySelector(".comment-slider-button.right").onclick = () => {comment_slider_index = (comment_slider_index + 1) % comment_slider.length;slider(comment_slider, comment_slider_index)};
+
+
+
+slider(reason_slider, reason_slider_index);
+slider(comment_slider, comment_slider_index);
 
